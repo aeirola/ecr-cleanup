@@ -1,0 +1,15 @@
+language: python
+python:
+- '2.7'
+- '3.3'
+- pypy
+script: python setup.py test
+deploy:
+  provider: pypi
+  user: aeirola
+  password:
+    secure: hTIf0J1jZn6zQR5ZY6JF9ntcXMp1pd9SxZzkVhyMZcd+50yFUa15HhZk0si4IEj9HUGS5v4xf0WZ/ibez0zLLiC8OpnEK82TE/i+iIDrOewZGEiqNy3sw0P3XqKXDv+rxHH7yMORGHQSe5t2zrM46Fz4zfiz6HouB+e3Tgvg3E2SFI4NHtXPQ7Z6izCOwecnrdDEW7LnYqItKmmYAOoQwIkzDz33jRHUBcojZGQtl1ipbYN9rfkUC7GFKrx3+iQ+1A49Wo71XWas5oZKSDJPNaYi+9LYdKezuyX49cqBcCkFST/QJqVOdnP6NALmLzNNmQDbKgwUflj2aP5s/mZxpiiqIA63ZMHKlg59Sqqg7bdS47CFJm2ykVwur5hzQQLqDMSKinNxCcBMVbFbQi+tHH6jCsBw4nJ8Vc2WBEsgwXLJRTz7thOliWtrk1O+XSyR/FB+Mv8kxLycSYytP3QpJi0dGtXiHFs7Y0as5C2uogl7zQmkIoPijQFICT9HuQZpbliwdFZNqbIGzCcBsGQRENGPrfJHIwZQqN9BCtit3QdbyAFClVDSayJjZFjB+BkzaViLTr8w28fFBq8LlPM3akj8uOcWc8r5djmvylQ8Yr2vDNddvW7iPOo72W5lkYg8x2Xa0BYQoTvPZeF8N3ZijhzrLf2zNNeZCfOzIRkXBcc=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: aeirola/ecr-cleanup
