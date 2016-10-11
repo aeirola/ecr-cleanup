@@ -5,7 +5,7 @@ import sys
 import argparse
 import pprint
 
-def main(args):
+def main(args=None):
     # Read arguments
     parser = argparse.ArgumentParser(description='Clean ECR repositories.')
     parser.add_argument('--repository-name', required=True, help='The repository whose image IDs are to be listed.')
@@ -35,4 +35,4 @@ def main(args):
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    main()
